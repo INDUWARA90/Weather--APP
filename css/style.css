@@ -1,0 +1,19 @@
+.container{
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+}
+.Search-btn{
+    
+    height: 40px;
+    margin-left: -55px;
+
+}
+.Search-box{
+    border-style: solid;
+    border-color: rgb(183, 178, 178);
+    border-radius: 4px;
+    width: 250px;
+    height: 35px;
+}
