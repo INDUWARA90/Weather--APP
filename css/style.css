@@ -17,17 +17,21 @@ body{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    
 }
 
 .container{
     position: relative;
     width: 500px;
-    height: 550px;
     background-color: transparent;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 1px solid white;
+    border-radius: 20px;
     padding: 10px;
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    
 
+    
 }
 .container-search{
     margin-top: 20px;
@@ -36,7 +40,7 @@ body{
     height: 55px;
     display: flex;
     align-items: center;
-
+    margin-bottom: 20px;
 }
 
 .container-search p{
@@ -46,20 +50,21 @@ body{
 
 .container-search input{
     position: absolute;
-    border: 1px solid black;
+    border: 1px solid rgb(54, 50, 50);
     width:80%;
     height: 100%;
     border-radius: 5px;
-    font-size: medium;
+    font-size: x-large;
     color: rgb(0, 0, 0);
     font-weight: 500;
-    text-transform: uppercase;
+    text-transform: lowercase;
     outline: none;
     background-color: transparent;
     padding: 0px 48px 0px 42px;
+
 }
 
-.container-search input ::placeholder{
+.container-search input::placeholder{
     text-transform: uppercase;
     color: rgb(0, 0, 0);
 }
@@ -94,18 +99,19 @@ body{
 }
 
 .wheather-info-description p{
-    font-weight: 600;
-    font-size: x-large;
+    font-weight: 700;
+    font-size: xx-large;
     text-align: center;
 
 }
 .Number{
-    font-size: xxx-large;
+    font-size: 80px;
     font-weight: bold;
 }
 .city{
-
+    font-weight: bold;
     font-size: 50px;
+    color:rgb(0, 0, 0);
 }
 
 .container-bottom{
@@ -113,28 +119,26 @@ body{
 }
 .container-wind-info-humidtiy{
     display: flex;
-    margin-left: 90px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
 }
 .wind-icon{
     width: 60px;
-    
-    
 }
 .wind,
 .humidtiy{
+    font-size: x-large;
+    font-weight: bold;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .about-wind{
-
-    margin-right: 55px;
-}
-.cancel-button-diactive{
-    width: 30px;
-    margin-left: 380px;
-    visibility: hidden;
+    margin-right: 25px;
 }
 
-/* .cancel-button-active{
-    visibility: visible;
-} */
+.container-mid{
+    display: none;
+    
+}

@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wheather APP</title>
     <link rel="stylesheet" href="css/style.css">
     <!-- Icons import -->
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 
 </head>
-<body>
+
+<body background="asset/background.jpg">
 
     <div class="container">
-                <div class="container-search">
-                                <p> <img src="asset/map-pin-.png" style="width: 25px;"></p>
-                                <input type="text" id="txt-search-box" class="Search-box" placeholder="Enter City Name">
-                                <img src="asset/cancel.png" class="cancel-button-diactive  " >
-                                <button class="Search-btn"><img src="asset/search.png" style="width: 25px; margin-right: 15px;"></button>
-                                
-                            </div>
+        <div class="container-search">
+            <p> <img src="asset/map-pin-.png" style="width: 25px;"></p>
+            <input type="text" id="txt-search-box" class="Search-box" placeholder="Enter City Name">
+            <button class="Search-btn"><img src="asset/search.png" style="width: 25px; margin-right: 15px;"></button>
 
-                <div class="container-wheather">
+        </div>
 
-                            <div class="wheather-info">
-                                        <div class="wheather-info-image">
-                                                <img src="asset/cloud.png" id="image-weather">
-                                        </div>
-                            </div>
+        <div class="container-mid">
+            <div class="container-wheather">
 
-                            <div class="wheather-info-description">
-                                <p><span class="Number" id="Number">22</span>°C  <br><span class="city" id="city">Horana</span></p>
-                            </div>
+                <div class="wheather-info">
+                    <div class="wheather-info-image">
+                        <img src="asset/cloud.png" id="image-weather">
+                    </div>
                 </div>
 
-                <div class="container-bottom">
-                            <div class="container-wind-info-humidtiy">
-                                            
-                                            <div class="wind">
-                                                
-                                                        <img src="asset/wind.png" class="wind-icon"><p class="about-wind"> <span class="wind-speed" id="wind-speed-number">18 </span>Km/h<br> wind speed</p>
-                                                
-                                            </div>
-                                            
-                                            <div class="humidtiy">
-                                                    <img src="asset/humidity.png" class="wind-icon"><P class="about-wind"><span class="humidity-percentage" id="humidity-percentage">64</span>% <br>Humidity</P> 
-                                                     
-                                            </div>
-                            </div>
+                <div class="wheather-info-description">
+                    <p><span class="Number" id="Number">22</span>°C <br><span class="city" id="city">Horana</span></p>
                 </div>
+            </div>
+
+            <div class="container-bottom">
+                <div class="container-wind-info-humidtiy">
+
+                    <div class="wind">
+
+                        <img src="asset/wind.png" class="wind-icon">
+                        <p class="about-wind"> <span class="wind-speed" id="wind-speed-number">18 </span>Km/h<sup>-1</sup><br> Wind
+                            Speed
+                        </p>
+
+                    </div>
+
+                    <div class="humidtiy">
+                        <img src="asset/humidity.png" class="wind-icon">
+                        <P class="about-wind"><span class="humidity-percentage" id="humidity-percentage">64</span>%
+                            <br>Humidity
+                        </P>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
 
     </div>
 
-   <script src="script/main.js"></script> 
+    <script src="script/main.js"></script>
 </body>
+
 </html>
