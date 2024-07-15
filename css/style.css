@@ -142,3 +142,86 @@ body{
     display: none;
     
 }
+/*====================================== */
+
+
+
+@media (max-width: 600.98px) {
+    .container{
+        width: 480px;
+    }
+    .container-search input{
+        width: 75%;
+    }
+    .Search-btn{
+        margin-right: 30px;
+    }
+}
+
+
+@media (max-width: 555.98px) {
+    .Search-btn{
+        margin-right: 5px;
+    }
+    .container{
+        width: 400px;
+    }
+    .about-wind{
+        font-size: small;
+    }
+    .city {
+        font-size: xx-large;
+    }
+    .Number{
+        font-size: xxx-large;
+    }
+}
+
+@media (max-width: 476px) {
+    .container{
+        width: 400px;
+    }
+ 
+}
+
+
+
+@media (max-width: 390px) {
+    .container{
+        width: 300px;
+    }
+    .container-search input{
+        width: 65%;
+        font-size: medium;
+    }
+    .about-wind{
+        font-size: xx-small;
+    }
+}
+
+@media (max-width: 290px) {
+    .container{
+        width: 220px;
+    }
+    .wheather-info-image img{
+        width: 100px;
+    }
+    .city {
+        font-size: large;
+    }
+    .Number{
+        font-size: xx-large;
+    }
+    .about-wind{
+        font-size: 9px;
+    }
+    .container-search input{
+        width: 55%;
+        font-size: small;
+    }
+    .wind-icon{
+        width: 20px;
+    }
+}
+
+
