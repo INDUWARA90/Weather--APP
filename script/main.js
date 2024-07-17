@@ -3,12 +3,11 @@ const SearchButton = document.querySelector('.Search-btn');
 const CancelButton = document.querySelector('.cancel-button-diactive');
 const APIKey = "4a301f16cac37a61a82606d4eda16fd5";
 
-SearchButton.addEventListener('click', () => {
-    GetWeather();
+SearchButton.addEventListener('click',getWeather);
 
-});
 
-function GetWeather() {
+
+function getWeather() {
     const CityName = document.getElementById('txt-search-box').value;
 
 
@@ -33,6 +32,7 @@ function GetWeather() {
             WindSpeed.innerText = data.wind.speed;
 
             document.querySelector(".container-mid").style.display = "block";
+          //  document.querySelector('.container-INFO').style.display="block";
             switch (data.weather.main) {
                 case "Clouds":
                     image.src = "asset/cloud.png";
@@ -65,3 +65,5 @@ function GetWeather() {
     }
 
 }
+
+//==================container-INFO======================

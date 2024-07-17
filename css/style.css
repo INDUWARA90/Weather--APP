@@ -11,6 +11,7 @@ p{
 body{
     font-family: "Poppins", sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center; 
     background-repeat: no-repeat;
@@ -111,6 +112,7 @@ body{
 .city{
     font-weight: bold;
     font-size: 50px;
+    margin-left: -30px;
     color:rgb(0, 0, 0);
 }
 
@@ -142,6 +144,110 @@ body{
     display: none;
     
 }
+
+
+.container-time-date{
+    margin-top: 20px;
+    width: 500px;
+    height: 250px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    gap: 6px;
+}
+.container-time{
+    flex: 1;
+    border-radius: 20px;
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+}
+.container-date{
+    flex: 1;
+    border-radius: 20px;
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+.container-country{
+    margin-top: 20px;
+    width: 500px;
+    height: 100px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.container-contry-name{
+    flex: 1;
+    border-radius: 20px;
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+.container-country-{
+    margin-top: 20px;
+    width: 500px;
+    height: 360px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    gap: 9px;
+}
+
+.box{
+    flex: 1;
+    height: 250px;
+    border-radius: 20px;
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+.box2{
+    flex: 1;
+    border-radius: 20px;
+    height: 350px;
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+.container-country_{
+    margin-top: 20px;
+    width: 500px;
+    height: 200px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+.box3{
+    flex: 1;
+    border-radius: 20px;
+    height: 230px;
+    width: 230px;
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+}
+.box4{
+    flex: 1;
+    border-radius: 20px;
+    height: 200px;
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+}
+
+
 /*====================================== */
 
 
@@ -174,6 +280,9 @@ body{
     }
     .Number{
         font-size: xxx-large;
+    }
+    .city {
+             margin-left: -5px;
     }
 }
 
@@ -208,6 +317,7 @@ body{
     }
     .city {
         font-size: large;
+        margin-left: -5px;
     }
     .Number{
         font-size: xx-large;
