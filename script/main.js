@@ -1,9 +1,9 @@
 
 const SearchButton = document.querySelector('.Search-btn');
 const CancelButton = document.querySelector('.cancel-button-diactive');
-const APIKey = "4a301f16cac37a61a82606d4eda16fd5";
 
-SearchButton.addEventListener('click',getWeather);
+
+SearchButton.addEventListener('click', getWeather);
 
 
 
@@ -17,53 +17,65 @@ function getWeather() {
     const WindSpeed = document.getElementById('wind-speed-number');
     const humidity = document.getElementById('humidity-percentage');
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${CityName}&appid=${APIKey}&units=metric`)
+    const CountryName =document.getElementById('Name-Country');
+    const Sunrise =document.getElementById('Sunrise');
+    const sunset =document.getElementById('Sunset');
+    const FeelLike =document.getElementById('feels-like-temp');
+    const date =document.getElementById('Date');
+    const Time =document.getElementById('time');
+    const Pressure =document.getElementById('Pressure');
+    const UV =document.getElementById('UV');
+    
+
+
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=a06fe2c5d2114212a6291249242608&q=${CityName}&days=7`)
         .then((response) => response.json()).then(data => {
+         
+                console.log(data);
+         
 
-            if (data.cod === "404") {
-                alert("Spelling Mistake Check Again");
-                return;
-            }
+                
+                        //=========Main details==============
+                        CountofTemp.innerText = Math.round(data.current.temp_c);
+                        city.innerText = data.location.name;
+                        humidity.innerText = data.current.humidity;
+                        WindSpeed.innerText = data.current.wind_kph;
+                        image.src=data.current.condition.icon;
+                        
+                        //=========Sub details==============
+                        CountryName.innerText=data.location.country;
+                        Sunrise.innerText=data.forecast.forecastday[0].astro.sunrise;
+                        sunset.innerText=data.forecast.forecastday[0].astro.sunset;
+                        FeelLike.innerText=data.current.feelslike_c+"°C";
+                        date.innerText=data.forecast.forecastday[0].date;
+                        Time.innerText=remove(data.location.localtime,0,11);
+                        Pressure.innerText=data.current.pressure_in+" PSI";
+                        UV.innerText=Math.round(data.current.uv);
+                        
 
-            console.log(data);
-            CountofTemp.innerText = Math.round(data.main.temp);
-            city.innerText = data.name;
-            humidity.innerText = data.main.humidity;
-            WindSpeed.innerText = data.wind.speed;
 
-            document.querySelector(".container-mid").style.display = "block";
-          //  document.querySelector('.container-INFO').style.display="block";
-            switch (data.weather.main) {
-                case "Clouds":
-                    image.src = "asset/cloud.png";
-                    break;
-                case "Clear":
-                    image.src = "asset/clear.png";
-                    break;
-                case "Rain":
-                    image.src = "asset/rain.png";
-                    break;
-                case "Drizzle":
-                    image.src = "asset/Drizzle.png";
-                    break;
-                case "Mist":
-                    image.src = "asset/mist.png";
-                    break;
-                case "Snow":
-                    image.src = "asset/snow.png";
-                    break;
-                default:
 
-                    break;
-            }
+                        //=========Display Property====================
+                        const showContent=document.querySelectorAll(".content");
+                        showContent.forEach(element=>{element.style.display = "block";})
+                        document.querySelector(".container-mid").style.display = "block";
+
+                        document.getElementById('txt-search-box').value="";          
+
+                        
+                
+
+               
         });
 
-
-    if (!CityName) {
-        alert("Please Enter City");
-        return;
-    }
-
+        
 }
 
-//==================container-INFO======================
+// https://api.weatherapi.com/v1/current.json?key=3bf3cf9506af4f6f89f90150242608&q=London
+
+function remove(string, from, to) {
+        return string.substring(0, from) + string.substring(to);
+}
+
+
+// Alret bottom eke box

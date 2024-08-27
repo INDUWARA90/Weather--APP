@@ -1,6 +1,14 @@
 /* Font import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+*{
+    font-family: "Poppins", sans-serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 
 p{
     margin: 0;
@@ -8,20 +16,18 @@ p{
     
 }
 
-body{
-    font-family: "Poppins", sans-serif;
+
+.main{
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+ 
     
 }
 
-.container{
+.container-app{
     position: relative;
     width: 500px;
     background-color: transparent;
@@ -45,14 +51,21 @@ body{
 }
 
 .container-search p{
-    margin-left: 10px;
+
+    margin-left: 7px;
     cursor: default;
+    margin-top: 14px;
+ 
+}
+.map-image{
+    width: 25px;
+    margin-top: 2px;
 }
 
 .container-search input{
     position: absolute;
     border: 1px solid rgb(54, 50, 50);
-    width:80%;
+    width:100%;
     height: 100%;
     border-radius: 5px;
     font-size: x-large;
@@ -62,6 +75,7 @@ body{
     outline: none;
     background-color: transparent;
     padding: 0px 48px 0px 42px;
+    
 
 }
 
@@ -95,9 +109,11 @@ body{
 
 }
 .wheather-info-image img{
-    width: 250px;
-    
+    width: 328px;
+    margin-left: -51px;
 }
+    
+
 
 .wheather-info-description p{
     font-weight: 700;
@@ -114,6 +130,7 @@ body{
     font-size: 50px;
     margin-left: -30px;
     color:rgb(0, 0, 0);
+    margin-left: -19px;
 }
 
 .container-bottom{
@@ -126,7 +143,7 @@ body{
     margin-left: 25px;
 }
 .wind-icon{
-    width: 60px;
+    width: 70px;
 }
 .wind,
 .humidtiy{
@@ -162,18 +179,20 @@ body{
     border-radius: 20px;
     background-color:rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
+    padding: 20px;
 }
 .container-date{
     flex: 1;
     border-radius: 20px;
     background-color:rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
+    padding: 20px;
 }
 
 .container-country{
     margin-top: 20px;
     width: 500px;
-    height: 100px;
+    height: unset;
     background-color: transparent;
     border: 1px solid white;
     border-radius: 20px;
@@ -187,6 +206,7 @@ body{
     border-radius: 20px;
     background-color:rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
+    padding: 20px;
 }
 
 .container-country-{
@@ -203,18 +223,20 @@ body{
 
 .box{
     flex: 1;
-    height: 250px;
+    height: unset;
     border-radius: 20px;
     background-color:rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
+    padding: 30px;
 }
 
 .box2{
     flex: 1;
     border-radius: 20px;
-    height: 350px;
+    height: 200px;
     background-color:rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
+    padding: 30px;
 }
 
 .container-country_{
@@ -230,6 +252,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 9px;
+    
 }
 .box3{
     flex: 1;
@@ -247,91 +270,42 @@ body{
     backdrop-filter: blur(15px);
 }
 
+.content{
+    /* display: none; */
+}
 
-/*====================================== */
+.prediction{
+    border-radius: 20px;
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 450px;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
 
+}
 
-
-@media (max-width: 600.98px) {
-    .container{
-        width: 480px;
-    }
-    .container-search input{
-        width: 75%;
-    }
-    .Search-btn{
-        margin-right: 30px;
-    }
+.container-prediction{
+    margin-top: 20px;
+    width: unset;
+    height: unset;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
 }
 
 
-@media (max-width: 555.98px) {
-    .Search-btn{
-        margin-right: 5px;
-    }
-    .container{
-        width: 400px;
-    }
-    .about-wind{
-        font-size: small;
-    }
-    .city {
-        font-size: xx-large;
-    }
-    .Number{
-        font-size: xxx-large;
-    }
-    .city {
-             margin-left: -5px;
-    }
+.footer{
+    border-radius: 5px;
+    background-color:rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1px);
 }
-
-@media (max-width: 476px) {
-    .container{
-        width: 400px;
-    }
- 
-}
-
-
-
-@media (max-width: 390px) {
-    .container{
-        width: 300px;
-    }
-    .container-search input{
-        width: 65%;
-        font-size: medium;
-    }
-    .about-wind{
-        font-size: xx-small;
-    }
-}
-
-@media (max-width: 290px) {
-    .container{
-        width: 220px;
-    }
-    .wheather-info-image img{
-        width: 100px;
-    }
-    .city {
-        font-size: large;
-        margin-left: -5px;
-    }
-    .Number{
-        font-size: xx-large;
-    }
-    .about-wind{
-        font-size: 9px;
-    }
-    .container-search input{
-        width: 55%;
-        font-size: small;
-    }
-    .wind-icon{
-        width: 20px;
-    }
-}
-
-
