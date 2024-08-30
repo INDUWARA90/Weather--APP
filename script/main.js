@@ -25,15 +25,35 @@ function getWeather() {
     const Time =document.getElementById('time');
     const Pressure =document.getElementById('Pressure');
     const UV =document.getElementById('UV');
+    const Raining =document.getElementById('Raining');
+    const Snowing =document.getElementById('Snowing');
+    const Predictions=document.querySelector('.prediction');
+
+
+
+    let HTML=`
+     <p class="prediction-title">Prediction Weather For Next 7 Days</p>
+
+                        <div class="P-title">
+                            <h4>Date</h4>
+                            <h4>Avarage temp</h4>
+                        </div>
     
+    `;
 
 
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=a06fe2c5d2114212a6291249242608&q=${CityName}&days=7`)
-        .then((response) => response.json()).then(data => {
-         
-                console.log(data);
-         
+        .then((response) => response.json())
+        .then(data => {
+                        if (!CityName) {
+                                alert("Please Enter City");
+                                return;
+                        }
 
+                        if (data.current === undefined) {
+                                alert("No matching location found.Please Check your Spellings Again !");
+                                return;
+                        }
                 
                         //=========Main details==============
                         CountofTemp.innerText = Math.round(data.current.temp_c);
@@ -51,19 +71,33 @@ function getWeather() {
                         Time.innerText=remove(data.location.localtime,0,11);
                         Pressure.innerText=data.current.pressure_in+" PSI";
                         UV.innerText=Math.round(data.current.uv);
+                        Raining.innerText=data.forecast.forecastday[0].day.daily_chance_of_rain+"%";
+                        Snowing.innerText=data.forecast.forecastday[0].day.daily_chance_of_snow+"%";
                         
 
+                        data.forecast.forecastday.forEach(day=>{
+                                HTML+=`
+                                <div class="P-Dates">
+                                        <p>${day.date}</p>
+                                        <p class="P-Dates-cel">${Math.round(day.day.avgtemp_c)}°C</p>
+                                </div>
+                                
+                                `
+                        });
+
+                        Predictions.innerHTML=HTML;
+     
 
 
                         //=========Display Property====================
-                        const showContent=document.querySelectorAll(".content");
-                        showContent.forEach(element=>{element.style.display = "block";})
+                       
+                       
                         document.querySelector(".container-mid").style.display = "block";
+                        document.querySelector(".container-INFO").style.display = "block";
+                        document.querySelector(".footer-container").style.display = "block";
 
                         document.getElementById('txt-search-box').value="";          
 
-                        
-                
 
                
         });

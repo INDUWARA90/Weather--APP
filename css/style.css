@@ -28,6 +28,7 @@ p{
 }
 
 .container-app{
+    margin-top: 80px;
     position: relative;
     width: 500px;
     background-color: transparent;
@@ -110,7 +111,7 @@ p{
 }
 .wheather-info-image img{
     width: 328px;
-    margin-left: -51px;
+    margin-left: -39px;
 }
     
 
@@ -270,19 +271,18 @@ p{
     backdrop-filter: blur(15px);
 }
 
-.content{
-    /* display: none; */
-}
+
 
 .prediction{
     border-radius: 20px;
     background-color:rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
     padding: 25px;
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
     width: 450px;
-    height: 200px;
+    height: unset;
     justify-content: space-around;
     align-items: center;
 
@@ -308,4 +308,39 @@ p{
     border-radius: 5px;
     background-color:rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(1px);
+}
+
+.prediction-title{
+    font-size: large;
+    margin-top: -15px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.P-title{
+    display: flex;
+    justify-content: 
+    space-between;
+    align-items: baseline;
+    width: 100%;
+    margin-bottom: 13px;
+}
+
+.P-Dates{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    color: rgb(82, 82, 82);
+    font-weight: bolder;
+}
+
+.P-Dates-cel{
+    margin-right: 60px;
+}
+
+
+.container-INFO,
+.footer-container{
+    display: none;
 }
