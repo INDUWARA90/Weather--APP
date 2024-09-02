@@ -1,9 +1,6 @@
 
 @media (max-width: 476px) {
-    .btn{
-        background-color: rgb(252, 37, 133);
-    }
-
+ 
     .container-app{
         width: 450px;
     }
@@ -12,7 +9,6 @@
     .humidtiy{
 
         font-size: medium;
-
     }
 
     .container-country,
@@ -22,16 +18,14 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+
 }
 
 
 
 @media (max-width: 450px) {
-    .btn{
-        background-color: red;
-    }
-    
-
+ 
     .container-app{
         width: 400px;
     }
@@ -46,15 +40,178 @@
     .container-country,
     .container-prediction,
     .Two-box{
-        width: 440px;
+        width: 445px;
         margin-left: auto;
         margin-right: auto;
+    }
+    #Date{
+        font-size: medium;
     }
 }
 
 @media (max-width: 418px) {
-    .btn{
-        background-color: red;
+  
+
+    
+    .container-app{
+        width: 350px;
     }
+
+    .wind,
+    .humidtiy{
+
+        font-size: x-small;
+
+    }
+
+    .container-country,
+    .container-prediction,
+    .Two-box{
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #city{
+        font-size: 30px;
+    }
+
+    .wheather-info-image img {
+        width: 228px;
+        margin-left: -20px;
+      }
+     
+      .prediction-title{
+            font-size: medium;
+      }
+}
+
+@media (max-width: 418px) {
+  
+    .container-app{
+        width: 350px;
+    }
+
+    .wind,
+    .humidtiy{
+
+        font-size: x-small;
+
+    }
+
+    .container-country,
+    .container-prediction,
+    .Two-box{
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #city{
+        font-size: 30px;
+    }
+
+    .wheather-info-image img {
+        width: 228px;
+        margin-left: -20px;
+      }
+     
+      .prediction-title{
+            font-size: x-small;
+      }
+     
+      #Sunset,
+      #Sunrise{
+        font-size: x-large;
+      }
+
+      .container-date h1,
+      .container-time h1{ 
+        font-size: large;
+      }
+      
+      .P-Dates-cel {
+        margin-right: 30px;
+      }
+
+      .P-title h4{
+        font-size: medium;
+      }
+
+      .P-Dates p{
+        font-size: x-small;
+      }
+}
+
+
+@media (max-width: 354px) {
+    
+    .container-app{
+        width: 300px;
+    }
+
+    .wind img,
+    .humidtiy img{
+        width: 50px;
+    }
+
+    .container-country,
+    .container-prediction,
+    .Two-box{
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #city{
+        font-size: 30px;
+    }
+
+    .wheather-info-image img {
+        width: 228px;
+        margin-left: -20px;
+      }
+     
+      .prediction-title{
+            font-size: x-small;
+      }
+     
+      #Sunset,
+      #Sunrise{
+        font-size: x-large;
+      }
+
+      .container-date h1,
+      .container-time h1{ 
+        font-size: large;
+      }
+      
+      .P-Dates-cel {
+        margin-right: 30px;
+      }
+
+      .P-title h4{
+        font-size: medium;
+      }
+
+      .P-Dates p{
+        font-size: x-small;
+      }
+      .box2 h1{
+        font-size: medium;
+        font-weight: bold;
+      }
+      .box2 h2{
+        font-size: x-large;
+      }
+      .container-date {
+        width: 100px;
+      }
+
+      #Date{
+        font-size:x-small ;
+        font-weight: bold;
+    }
+  
 }
 
