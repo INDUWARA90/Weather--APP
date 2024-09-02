@@ -164,7 +164,7 @@ p{
 }
 
 
-.container-time-date{
+.Two-box{
     margin-top: 20px;
     width: 500px;
     height: 250px;
@@ -281,7 +281,7 @@ p{
     display: flex;
     flex-direction: column;
     padding: 30px;
-    width: 450px;
+    width: auto;
     height: unset;
     justify-content: space-around;
     align-items: center;
@@ -343,4 +343,27 @@ p{
 .container-INFO,
 .footer-container{
     display: none;
+}
+
+
+.error-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+}
+
+
+
+.error-container img{
+    width: 400px;
+}
+
+.error-headings p{
+    margin-top: 20px;
+    font-size: small;
+    font-weight: bold;
 }

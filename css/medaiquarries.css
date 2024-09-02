@@ -1,0 +1,60 @@
+
+@media (max-width: 476px) {
+    .btn{
+        background-color: rgb(252, 37, 133);
+    }
+
+    .container-app{
+        width: 450px;
+    }
+
+    .wind,
+    .humidtiy{
+
+        font-size: medium;
+
+    }
+
+    .container-country,
+    .container-prediction,
+    .Two-box{
+        width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+@media (max-width: 450px) {
+    .btn{
+        background-color: red;
+    }
+    
+
+    .container-app{
+        width: 400px;
+    }
+
+    .wind,
+    .humidtiy{
+
+        font-size: small;
+
+    }
+
+    .container-country,
+    .container-prediction,
+    .Two-box{
+        width: 440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 418px) {
+    .btn{
+        background-color: red;
+    }
+}
+

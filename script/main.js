@@ -51,7 +51,11 @@ function getWeather() {
                         }
 
                         if (data.current === undefined) {
-                                alert("No matching location found.Please Check your Spellings Again !");
+                                document.querySelector('.error-container').style.display = "block";  
+                                document.querySelector(".container-mid").style.display = "none";
+                                document.querySelector(".container-INFO").style.display = "none";
+                                document.querySelector(".footer-container").style.display = "none";
+                                
                                 return;
                         }
                 
@@ -95,6 +99,7 @@ function getWeather() {
                         document.querySelector(".container-mid").style.display = "block";
                         document.querySelector(".container-INFO").style.display = "block";
                         document.querySelector(".footer-container").style.display = "block";
+                        document.querySelector('.error-container').style.display = "none";
 
                         document.getElementById('txt-search-box').value="";          
 
